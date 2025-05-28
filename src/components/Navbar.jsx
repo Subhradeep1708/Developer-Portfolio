@@ -34,6 +34,7 @@ const Navbar = () => {
                     className='text-2xl font-bold text-primary flex items-center'
                 >
                     <span className='relative z-10'>
+                        
                         <span className='text-glow text-foreground'>Subhradeep's</span> Portfolio
                     </span>
                 </a>

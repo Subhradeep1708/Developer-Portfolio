@@ -1,6 +1,9 @@
 import AboutMeSection from "../components/AboutMeSection"
+import ContactSection from "../components/ContactSection"
+import Footer from "../components/Footer"
 import HeroSection from "../components/HeroSection"
 import Navbar from "../components/Navbar"
+import ProjectSection from "../components/ProjectSection"
 import SkillsSection from "../components/SkillsSection"
 import StarBackground from "../components/StarBackground"
 import ThemeToggle from "../components/ThemeToggle"
@@ -21,9 +24,13 @@ const Home = () => {
                 <HeroSection/>
                 <AboutMeSection/>
                 <SkillsSection/>
+                <ProjectSection/>
+                <ContactSection/>
             </main>
 
             {/* Footer */}
+            
+            <Footer/>
         </div>
     )
 }

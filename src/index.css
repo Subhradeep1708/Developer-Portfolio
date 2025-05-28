@@ -1,5 +1,6 @@
 @import "tailwindcss";
-@plugin "daisyui";
+/* @plugin "daisyui"; */
+
 @theme {
     --color-border: hsl(var(--border));
     --color-background: hsl(var(--background));
@@ -157,12 +158,12 @@
 } */
 /* Only apply the non-arbitrary utilities here */
 .cosmic-button {
-    @apply px-6 py-2 bg-primary rounded-full text-primary-foreground font-medium transition-all duration-300 ;
+    @apply px-6 py-2 bg-primary rounded-full text-primary-foreground font-medium transition-all duration-300;
 }
 
 /* And then use a plain CSS rule for the arbitrary hover shadow */
 .cosmic-button:hover {
-    
+
     box-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
     transform: scale(1.05);
 }
