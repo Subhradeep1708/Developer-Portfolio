@@ -19,7 +19,7 @@ const ContactSection = () => {
         setResult("Sending....");
         const formData = new FormData(event.target);
 
-        formData.append("access_key","b8548bd5-ce87-472a-9dcb-26491f398f10");
+        formData.append("access_key", "b8548bd5-ce87-472a-9dcb-26491f398f10");
 
         const response = await fetch("https://api.web3forms.com/submit", {
             method: "POST",
@@ -137,7 +137,7 @@ const ContactSection = () => {
 
                     {/* Contact Form */}
 
-                    <div className="bg-card p-8 rounded-lg shadow-xs" onSubmit={handleSubmit}>
+                    <div className="bg-card p-8 rounded-lg shadow-xs" >
                         <h3 className='text-2xl font-semibold mb-6'>Send a Message</h3>
 
                         <form className='space-y-6' ref={form} onSubmit={handleSubmit}>
