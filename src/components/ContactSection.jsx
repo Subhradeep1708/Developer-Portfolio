@@ -10,10 +10,31 @@ const ContactSection = () => {
     const { toast } = useToast();
     const [isSubmitting, setIsSubmitting] = React.useState(false);
     const form = React.useRef(null);
+    const [result, setResult] = React.useState("");
 
-    const handleSubmit = (e) => {
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
+        setResult("Sending....");
+        const formData = new FormData(event.target);
+
+        formData.append("access_key","b8548bd5-ce87-472a-9dcb-26491f398f10");
+
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+            setResult("Form Submitted Successfully");
+            // event.target.reset();
+        } else {
+            console.log("Error", data);
+            setResult(data.message);
+        }
         setIsSubmitting(true);
 
         setTimeout(() => {
