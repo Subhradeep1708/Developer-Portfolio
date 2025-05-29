@@ -8,7 +8,7 @@ const Footer = () => {
 
             <p className="text-muted-foreground mb-4">
                 &copy; {new Date().getFullYear()} Subhradeep Sardar. All rights reserved. <br />
-                Built with ❤️ using React and Tailwind CSS
+                Built with ❤️ using React and Tailwind CSS by Subhradeep
             </p>
            
 

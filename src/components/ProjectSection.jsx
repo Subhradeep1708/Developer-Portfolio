@@ -5,33 +5,35 @@ import React from 'react'
 const projects = [
     {
         id: 1,
-        title: "SaaS Landing Page",
-        description: "A beautiful landing page app using React and Tailwind.",
-        image: "/projects/project1.png",
-        tags: ["React", "TailwindCSS", "Supabase"],
-        demoUrl: "#",
-        githubUrl: "#",
+        title: "Music School Website",
+        description:
+            "A modern website for a music school with course listings and instructor profiles.",
+        image: "/projects/project4.png",
+        tags: ["Next.js", "Aceternity", "TailwindCSS"],
+        demoUrl: "https://music-school-website-zeta.vercel.app/",
+        githubUrl: "https://github.com/Subhradeep1708/Music-School-Website",
     },
     {
         id: 2,
-        title: "Orbit Analytics Dashboard",
+        title: "Organa",
         description:
-            "Interactive analytics dashboard with data visualization and filtering capabilities.",
-        image: "/projects/project2.png",
-        tags: ["TypeScript", "D3.js", "Next.js"],
+            "A real time organ matching platform powered by AI. Won 2nd prize in Hackathon organized by GCECT and Bytemonk in 2025.",
+        image: "/projects/organa2.jpg",
+        tags: ["Next.js", "Python", "WebSocket", "TailwindCSS", "PostgreSQL"],
         demoUrl: "#",
-        githubUrl: "#",
+        githubUrl: "https://github.com/Subhradeep1708/Karmatek-2025-Organa",
     },
     {
         id: 3,
-        title: "E-commerce Platform",
+        title: "My Portfolio",
         description:
-            "Full-featured e-commerce platform with user authentication and payment processing.",
-        image: "/projects/project3.png",
-        tags: ["React", "Node.js", "Stripe"],
+            "A personal portfolio website showcasing my skills, projects, and experience.",
+        image: "/projects/Portfolio.png",
+        tags: ["React", "TailwindCSS"],
         demoUrl: "#",
-        githubUrl: "#",
+        githubUrl: "https://github.com/Subhradeep1708/Developer-Portfolio",
     },
+
 ];
 
 const ProjectSection = () => {
@@ -47,11 +49,11 @@ const ProjectSection = () => {
                     crafted with attention to detail, performance, and user experience.
                 </p>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 ">
                     {projects.map((project, key) => (
                         <div
                             key={key}
-                            className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover">
+                            className="group h-auto bg-card rounded-lg overflow-hidden shadow-xs card-hover">
 
                             <div className='h-48 overflow-hidden'>
                                 <img src={project.image} alt={project.title} className='w-full h-full object-cover transition-transform duration-500 group-hover:scale-110' />
@@ -59,7 +61,7 @@ const ProjectSection = () => {
 
                             <div className="p-6">
                                 <div className="flex flex-wrap gap-2 mb-4">
-                                    {project.tags.map((tag,key) => (
+                                    {project.tags.map((tag, key) => (
                                         <span key={key} className='px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground'>{tag}</span>
                                     ))}
                                 </div>
@@ -74,13 +76,17 @@ const ProjectSection = () => {
                                 <div className='flex justify-baseline items-center py-2'>
                                     <div className="flex space-x-3 ">
                                         <a
-                                            href={project.demoUrl}
-                                            target='_blank'
+                                            href={project.demoUrl === "#" ? "#projects" : project.demoUrl}
+                                            target={project.demoUrl === "#" ? undefined : "_blank"}
+                                            rel={project.demoUrl === "#" ? undefined : "noopener noreferrer"}
                                             className='text-foreground/80 hover:text-primary transition-colors duration-300'
                                         ><ExternalLink size={20} /></a>
                                         <a
-                                            href={project.githubUrl}
-                                            target='_blank'
+                                            // href={project.githubUrl}
+                                            // target='_blank'
+                                            href={project.githubUrl === "#" ? "#projects" : project.githubUrl}
+                                            target={project.githubUrl === "#" ? undefined : "_blank"}
+                                            rel={project.githubUrl === "#" ? undefined : "noopener noreferrer"}
                                             className='text-foreground/80 hover:text-primary transition-colors duration-300'
                                         ><Github size={20} /></a>
                                     </div>
@@ -92,10 +98,10 @@ const ProjectSection = () => {
                 </div>
 
                 <div className="mt-12 text-center">
-                    <a 
-                    href="https://github.com/Subhradeep1708" 
-                    target='_blank'
-                    className='cosmic-button w-fit flex items-center mx-auto gap-2'>
+                    <a
+                        href="https://github.com/Subhradeep1708"
+                        target='_blank'
+                        className='cosmic-button w-fit flex items-center mx-auto gap-2'>
                         Check My Gihub <ArrowRight size={16} />
                     </a>
                 </div>
