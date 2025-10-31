@@ -4,16 +4,19 @@ import { cn } from '../lib/utils'
 import ThemeButton from './ThemeButton'
 
 const ThemeToggle = () => {
-    const [isDarkMode, setIsDarkMode] = useState(false)
+    const [isDarkMode, setIsDarkMode] = useState(true)
 
     useEffect(() => {
         const storedTheme = localStorage.getItem("theme")
-        if (storedTheme === "dark") {
-            setIsDarkMode(true)
+        if (storedTheme === "light") {
+            setIsDarkMode(false)
             document.documentElement.classList.add("dark")
         } else {
-            localStorage.setItem("theme", "light")
-            setIsDarkMode(false)
+            setIsDarkMode(true)
+            document.documentElement.classList.add("dark")
+            if(!storedTheme){
+                localStorage.setItem("theme", "dark")
+            }
         }
     }, [])
     const toggleTheme = () => {

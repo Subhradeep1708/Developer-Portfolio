@@ -77,8 +77,8 @@ const ContactSection = () => {
 
                                 <div>
                                     <h4 className='font-medium'>Email</h4>
-                                    <a href="mailto:hello@gmail.com" className='text-muted-foreground hover:text-primary transition-colors'>
-                                        hello@gmail.com
+                                    <a href="mailto:subhradeep1708@gmail.com" className='text-muted-foreground hover:text-primary transition-colors'>
+                                        subhradeep1708@gmail.com
                                     </a>
 
                                 </div>
@@ -92,7 +92,7 @@ const ContactSection = () => {
 
                                 <div>
                                     <h4 className='font-medium'>Phone</h4>
-                                    <a href="tel:+911234567890" className='text-muted-foreground hover:text-primary transition-colors'>
+                                    <a href="tel:+919163361335" className='text-muted-foreground hover:text-primary transition-colors'>
                                         +911234567890
                                     </a>
 
@@ -117,17 +117,17 @@ const ContactSection = () => {
 
                         <div className="pt-8">
                             <h4 className='font-medium mb-4'>Connect With Me</h4>
-                            <div className="flex space-x-4 justify-center">
-                                <a href="#" target='_blank'>
+                            <div className="flex space-x-8 justify-center ">
+                                <a href="https://www.linkedin.com/in/subhradeep-sardar" target='_blank' noreferrer className='hover:text-primary text-muted-foreground'>
                                     <Linkedin />
                                 </a>
-                                <a href="#" target='_blank'>
+                                <a href="https://www.instagram.com/sardar_subhradeep" target='_blank' className='hover:text-primary text-muted-foreground'>
                                     <Instagram />
                                 </a>
-                                <a href="#" target='_blank'>
+                                <a href="https://github.com/Subhradeep1708" target='_blank' className='hover:text-primary text-muted-foreground'>
                                     <Github />
                                 </a>
-                                <a href="#" target='_blank'>
+                                <a href="https://www.facebook.com/share/17PZ8WQkwM/" target='_blank' className='hover:text-primary text-muted-foreground'>
                                     <Facebook />
                                 </a>
                             </div>

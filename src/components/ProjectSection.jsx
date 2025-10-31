@@ -1,10 +1,29 @@
 import { ArrowRight, ExternalLink, Github } from 'lucide-react';
-import React from 'react'
 
 
 const projects = [
     {
         id: 1,
+        title: "Digital Wallet",
+        description:
+            "A modern solution to manage your finances, track expenses, and make secure transactions.",
+        image: "/projects/project6.png",
+        tags: ["Next.js", "ShadCN", "TailwindCSS"],
+        demoUrl: "#",
+        githubUrl: "https://github.com/Subhradeep1708/Digital-Wallet-App",
+    },
+    {
+        id: 2,
+        title: "Hotel Booking App(Booky)",
+        description:
+            "Hotel booking application with user authentication, room search, and reservation features.",
+        image: "/projects/project7.png",
+        tags: ["Next.js", "ShadCN", "TailwindCSS","Strapi","RazorPay","Kinde"],
+        demoUrl: "https://booky-hotel-booking.vercel.app/",
+        githubUrl: "https://github.com/Subhradeep1708/Hotel-Booking",
+    },
+    {
+        id: 3,
         title: "Music School Website",
         description:
             "A modern website for a music school with course listings and instructor profiles.",
@@ -14,7 +33,7 @@ const projects = [
         githubUrl: "https://github.com/Subhradeep1708/Music-School-Website",
     },
     {
-        id: 2,
+        id: 4,
         title: "Organa",
         description:
             "A real time organ matching platform powered by AI. Won 2nd prize in Hackathon organized by GCECT and Bytemonk in 2025.",
@@ -23,16 +42,16 @@ const projects = [
         demoUrl: "#",
         githubUrl: "https://github.com/Subhradeep1708/Karmatek-2025-Organa",
     },
-    {
-        id: 3,
-        title: "My Portfolio",
-        description:
-            "A personal portfolio website showcasing my skills, projects, and experience.",
-        image: "/projects/Portfolio.png",
-        tags: ["React", "TailwindCSS"],
-        demoUrl: "#",
-        githubUrl: "https://github.com/Subhradeep1708/Developer-Portfolio",
-    },
+    // {
+    //     id: 4,
+    //     title: "My Portfolio",
+    //     description:
+    //         "A personal portfolio website showcasing my skills, projects, and experience.",
+    //     image: "/projects/Portfolio.png",
+    //     tags: ["React", "TailwindCSS"],
+    //     demoUrl: "#",
+    //     githubUrl: "https://github.com/Subhradeep1708/Developer-Portfolio",
+    // },
 
 ];
 
@@ -67,7 +86,7 @@ const ProjectSection = () => {
                                 </div>
 
                                 <hr />
-                                <h3 className=' my-1 text-xl font-semibold mb-1'>{project.title}</h3>
+                                <h3 className=' my-4 text-xl font-semibold mb-1'>{project.title}</h3>
                                 <p className="mb-4 text-muted-foreground text-sm">
                                     {project.description}
                                 </p>

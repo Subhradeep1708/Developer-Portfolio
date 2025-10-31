@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react'
-import { href } from 'react-router-dom'
+import { useEffect, useState } from 'react'
 import { cn } from '../lib/utils'
 import { Menu, X } from 'lucide-react'
 const navItems = [
@@ -16,7 +15,7 @@ const Navbar = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            setIsScrolled(window.screenY > 10)
+            setIsScrolled(window.scrollY > 10)
         }
 
         window.addEventListener("scroll", handleScroll)
@@ -26,16 +25,16 @@ const Navbar = () => {
     return (
         <nav className={cn(
             "fixed w-full z-40 transition-all duration-300",
-            isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs" : "py-5"
+            isScrolled ? "py-5 backdrop-blur-md shadow-xs" : "py-5"
         )}>
-    
+
             <div className="container flex items-center justify-between ">
                 <a
                     href='#hero'
                     className='text-2xl font-bold text-primary flex items-center'
                 >
                     <span className='relative z-10'>
-                        
+
                         <span className='text-glow text-foreground'>Subhradeep's</span> Portfolio
                     </span>
                 </a>
@@ -44,7 +43,7 @@ const Navbar = () => {
                 <div className='hidden md:flex space-x-8 px-9'>
                     {navItems.map((item, key) =>
                         <a href={item.href} key={key}
-                            className='text-foreground/80 hover:text-primary transition-colors duration-300 '
+                            className='text-foreground/80 hover:text-primary transition-colors duration-300 font-semibold'
                         >
 
                             {item.name}</a>
@@ -68,7 +67,7 @@ const Navbar = () => {
                     <div className='flex flex-col space-y-8 '>
                         {navItems.map((item, key) =>
                             <a href={item.href} key={key}
-                                className='text-foreground/80 hover:text-primary transition-colors duration-300 '
+                                className='text-foreground/80 hover:text-primary transition-colors duration-300 font-semibold'
                                 onClick={() => setIsMenuOpen(false)}
                             >
 
