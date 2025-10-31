@@ -69,9 +69,9 @@ const SkillsSection = () => {
                 </div>
 
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {filteredSkills.map((skill, key) => (
-                        <div key={key} className="py-4 bg-card rounded-lg shadow-md card-hover border-2 border-transparent hover:border-primary/50">
+                        <div key={key} className="py-4 bg-card rounded-lg shadow-md card-hover border-2 border-transparent hover:border-primary/50 hover:duration-300">
 
                             {/* icons */}
                             <div className=" flex justify-center  ">
